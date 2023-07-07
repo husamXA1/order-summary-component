@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Global Rules */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('images/pattern-background-mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+@media (min-width: 600px) {
+    body {
+        background-image: url('images/pattern-background-desktop.svg');
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Order Summary Component */
+.order-summary {
+    margin-top: 100px;
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary .text {
+    text-align: center;
+    padding: 2em;
+}
+
+.order-summary .title {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+.order-summary .description {
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-bottom: 2.5em;
+    color: hsl(224, 23%, 55%);
+    padding: 0 1em;
+}
+
+.order-summary .order {
+    background-color: hsl(225, 100%, 98%);
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.order-summary .sub-btn {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: hsl(224, 23%, 55%);
+}
+
+.order-summary .order .sub-btn {
+    color: hsl(245, 75%, 52%);
+    text-decoration: underline;
+}
+
+.order-summary button {
+    width: 100%;
+    padding: 1.2em;
+    border-radius: 1em;
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    font-weight: 700;
+    margin: 2.5em 0;
+    box-shadow: 0 1em 1em rgba(56, 41, 224, 0.3);
+}
+
+.order-summary .plan {
+    margin-right: auto;
+    margin-left: 1em;
+    text-align: left;
+}
+
+.order-summary h4 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.order-summary .price {
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.order-summary button,
+.order-summary .sub-btn {
+    cursor: pointer;
+}
+
+.order-summary .order .sub-btn:hover,
+.order-summary button:hover {
+    opacity: 0.75;
+}
+
+.order-summary .sub-btn:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+/* Attribution */
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
